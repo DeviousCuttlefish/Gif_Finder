@@ -13,6 +13,15 @@ addSearchBtns();
 $(document).on("click", ".btn", function () {
     $("#results").html("");
 
+    if ($('.list').children().length === 0) { // Checking if list is empty
+
+        $('.not-found').css('display', 'block');
+    } else {
+
+        $('.not-found').css('display', 'none'); // Hide the Not Found message
+
+    }
+
     var queryURL = "https://api.giphy.com/v1/gifs/search?";
     var query;
     var params = {
@@ -31,12 +40,14 @@ $(document).on("click", ".btn", function () {
         }
         addSearchBtns();
     }
+ 
     params.q = query;
 
     if ($(this).hasClass("trending")) {
         queryURL = "https://api.giphy.com/v1/gifs/trending?";
         delete params.q;
     }
+
     $.ajax({
         url: queryURL + $.param(params),
         method: "GET",
@@ -62,6 +73,8 @@ $(document).on("click", ".btn", function () {
                 $("#results").append($div);
             }
 
+            
+
             $(".gif").on("click", function () {
                 var state = $(this).attr("data-state");
                 if (state === "still") {
@@ -71,7 +84,9 @@ $(document).on("click", ".btn", function () {
                     $(this).attr("src", $(this).attr("data-still"));
                     $(this).attr("data-state", "still");
                 }
+                
             });
         }
+        
     });
 });

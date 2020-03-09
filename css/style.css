@@ -84,6 +84,12 @@ label {
     display: none;
 }
 
+.not-found {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 70px;
+}
+
 @font-face {
     font-family: Dosis;
     src: url(/Fonts/Dosis-Regular.ttf);

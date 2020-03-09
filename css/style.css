@@ -37,29 +37,74 @@ nav ul li {
 }
 
  .search-btn {
-        margin: 3px;
-    }
-    #submit,
-    .trending {
-        margin-bottom: 6px;
-    }
-    .search-bar {
-        margin-top: 0.4rem;
-    }
+    margin: 3px;
+}
+#submit,
+.trending {
+    margin-bottom: 6px;
+}
+.search-bar {
+    margin-top: 0.4rem;
+}
 
-    #results {
-        margin: 0 auto;
-        align-content: center;
-    }
-    
-    .gif-box {
-        margin: 0.5rem;
-        display: inline-block;
-        border: 1px solid black;
-        height: auto;
-        width: auto;
-    }
+#results {
+    margin: 0 auto;
+    align-content: center;
+}
+
+.gif-box {
+    margin: 0.5rem;
+    display: inline-block;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+}
+#user-search {
+    margin: 0 2rem 1.5rem 0;
+}
+
+#submit {
+    margin-right: 1rem;
+}
+
+label {
+    margin: 0 13.6rem 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    width: 26px;
+    float: right;
+    display: none;
+}
+
+#top-menu a {
+    clear: right;
+}
+
+#toggle {
+    display: none;
+}
 
 @font-face {
     font-family: Dosis;
-    src: url(/Fonts/Dosis/Dosis-Regular.ttf);}
+    src: url(/Fonts/Dosis-Regular.ttf);
+}
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    #top-menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    #top-menu a {
+        display: block;
+        border-bottom: 1px solid #eaeaeb;
+        margin: 0;
+    }
+    #toggle:checked + #top-menu {
+        display: block;
+    }
+}

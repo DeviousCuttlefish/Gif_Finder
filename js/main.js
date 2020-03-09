@@ -12,14 +12,10 @@ addSearchBtns();
 
 $(document).on("click", ".btn", function () {
     $("#results").html("");
-
-    if ($('.list').children().length === 0) { // Checking if list is empty
-
+    if ($('.list').children().length === 0) {
         $('.not-found').css('display', 'block');
     } else {
-
-        $('.not-found').css('display', 'none'); // Hide the Not Found message
-
+        $('.not-found').css('display', 'none');
     }
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?";

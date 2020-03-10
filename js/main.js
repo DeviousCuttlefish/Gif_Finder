@@ -14,7 +14,8 @@ $(document).on("click", ".btn", function () {
     $("#results").html("");
     if ($('.list').children().length === 0) {
         $('.not-found').css('display', 'block');
-    } else {
+    } 
+    else {
         $('.not-found').css('display', 'none');
     }
 
@@ -28,7 +29,8 @@ $(document).on("click", ".btn", function () {
     };
     if ($(this).hasClass("search-btn")) {
         query = $(this).val();
-    } else if ($("#user-search").val() !== "") {
+    } 
+    else if ($("#user-search").val() !== "") {
         query = $("#user-search").val();
         topics.push(query);
         if (topics.length > 6) {

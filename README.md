@@ -2,7 +2,7 @@ Name: Jeremy Harding
 
 Project Description: App is designed to pull gifs from giphy.com using their API and display them to the user. Additionally, user can choose to animate gifs by clicking.
 
-/Users/Hardings/Documents/GitHub/Gif_Finder/index.html
+https://deviouscuttlefish.github.io/Gif_Finder/
 
 Functionality: Single search bar where specific searches can be input by user. List of "hot topic" quick search links. "Trending" button to see the top 15 currently trending gifs.
 
